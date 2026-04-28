@@ -97,7 +97,7 @@ public with sharing class DoctorService {
             return sa.Id;
         }catch(exception e){
             Database.rollback(sp);
-            System.debug('exception '+e.getMessage());
+            System.debug('exception -->'+e.getMessage());
             throw new AuraHandledException(e.getMessage());
         }
         
